@@ -14,7 +14,8 @@ const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
   const formattedMesage = message.replace(/ /g, "%20")
   console.log("Mensaje formateado", formattedMesage, logo)
   return <>
-    <div className='fixed bottom-2 right-2 flex flexColumn'>
+    {/* <div className='fixed bottom-2 right-2 flex flexColumn'> */}
+    <div className='buttom-item'>
       <a
         href={`https://wa.me/${phone}?text=I'm%20interested%20in%20your%20car%20for%20sale`}
         target="_blank"
