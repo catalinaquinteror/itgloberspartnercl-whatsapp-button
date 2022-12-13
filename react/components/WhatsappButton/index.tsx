@@ -19,7 +19,7 @@ const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
     "whatsapp-container",
     "whatsapp-logo"
   ]
-  const handles = useCssHandles(CSS_HANDLES):
+  const handles = useCssHandles(CSS_HANDLES);
   return (<>
     {/* <div className='fixed bottom-2 right-2 flex flexColumn'> */}
     <div className={handles["whatsapp-container"]}>
