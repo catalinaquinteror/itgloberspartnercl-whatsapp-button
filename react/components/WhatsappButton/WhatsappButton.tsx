@@ -1,7 +1,5 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { useCssHandles } from 'vtex.css-handles'
-import './styles.css'
 
 type Props = {
   logo: string
@@ -12,36 +10,25 @@ type Props = {
 }
 
 const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
-  // console.log(logo, phone, message)
-  const formattedMesage = message.replace(/ /g, "%20");
-  // console.log("Mensaje formateado", formattedMesage, logo)
-  const CSS_HANDLES = [
-    "whatsapp-container",
-    "whatsapp-logo"
-  ]
-  const handles = useCssHandles(CSS_HANDLES);
-  return (<>
-    {/* <div className='fixed bottom-2 right-2 flex flexColumn'> */}
-    <div className={handles["whatsapp-container"]}>
+  const formattedMesage = message.replace(/ /g, "%20")
+
+  return <>
+    {/* <div className='fixed bottom-2 right-2 flex flexColumn z-999'> */}
+    <div className='ml6'>
+
       <a
         href={`https://wa.me/${phone}?text=${formattedMesage}`}
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img
-          className={handles['whatsap-logo']}
-          src={logo}
+        <img src={logo}
           width={width}
           height={height}
           alt="Logo de Whatsapp"
         />
       </a>
     </div>
-    {/* <p>{logo}</p>
-  <p>{phone}</p>
-  <p>{message}</p> */}
   </>
-  )
 }
 
 WhatsappButton.propTypes = {
@@ -55,9 +42,9 @@ WhatsappButton.propTypes = {
 WhatsappButton.defaultProps = {
   logo: "mi-logo.png",
   phone: "300151215",
-  message: "Este es un mensaje de prueba",
-  width: 80,
-  height: 80
+  message: "Bienvenido a GoPro Colombia",
+  width: 60,
+  height: 60
 }
 
 WhatsappButton.schema = {

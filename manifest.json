@@ -2,8 +2,8 @@
   "vendor": "itgloberspartnercl",
   "name": "whatsapp-button",
   "version": "0.0.1",
-  "title": "whatsapp-button",
-  "description": "whatsapp-button",
+  "title": "Whatsapp button",
+  "description": "Custom component that receives phone, name and message fields to whatsapp chat with the shop",
   "builders": {
     "react": "3.x",
     "messages": "1.x",
